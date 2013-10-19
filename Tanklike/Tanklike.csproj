@@ -102,8 +102,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Reference Include="MonoGame.Framework">
-      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll</HintPath>
+    <Reference Include="MonoGame.Framework, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.dll</HintPath>
@@ -128,16 +129,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioEngine.cs" />
+    <Compile Include="AudioManager.cs" />
     <Compile Include="ETileType.cs" />
+    <Compile Include="Fonts.cs" />
+    <Compile Include="InputManager.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="TanklikeGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenManagement\EScreenState.cs" />
+    <Compile Include="ScreenManagement\GameScreen.cs" />
+    <Compile Include="ScreenManagement\MenuEntry.cs" />
+    <Compile Include="ScreenManagement\MenuScreen.cs" />
+    <Compile Include="ScreenManagement\ScreenManager.cs" />
     <Compile Include="Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Content\Fonts\Arial.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Fonts\Calibri.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Music\song1.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Fonts\SegoeUI.xnb" />
+    <None Include="Content\Fonts\SegoeUIMono.xnb" />
+    <Content Include="Content\Sounds\boom1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sounds\boom2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Music\song1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Tanklike_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +181,7 @@
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
