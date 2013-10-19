@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="6e19f6bd-7e9e-4d76-bbba-7af77a1cb6d7" Publisher="CN=Nikola Begedin" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Tanklike</DisplayName>
+    <PublisherDisplayName>Nikola Begedin</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Tanklike.App">
+      <VisualElements DisplayName="Tanklike" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Tanklike" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" ShortName="Tanklike" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
