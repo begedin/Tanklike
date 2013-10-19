@@ -1,4 +1,4 @@
-﻿enum ETileType
+﻿public enum ETileType
 {
     FLOOR = 0
 }
