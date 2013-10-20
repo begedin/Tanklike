@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Tanklike.Camera;
 using Tanklike.ScreenManagement;
 using Tanklike.Screens;
 
@@ -12,10 +13,16 @@ namespace Tanklike
     {
         GraphicsDeviceManager _graphics;
         ScreenManager screenManager;
+        ResolutionIndependentRenderer _resolutionIndependence;
+        Camera2D _camera;
 
         public TanklikeGame()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _resolutionIndependence = new ResolutionIndependentRenderer(this);
+            _camera = new Camera2D(_resolutionIndependence);
+            
+            InitializeResolutionIndependence(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
 
             Content.RootDirectory = "Content";
             
@@ -84,5 +91,21 @@ namespace Tanklike
 
             base.Draw(gameTime);
         }
+
+
+        #region Helpers
+
+        private void InitializeResolutionIndependence(int realScreenWidth, int realScreenHeight)
+        {
+            _resolutionIndependence.VirtualWidth = 1366;
+            _resolutionIndependence.VirtualHeight = 768;
+            _resolutionIndependence.ScreenWidth = realScreenWidth;
+            _resolutionIndependence.ScreenHeight = realScreenHeight;
+            _resolutionIndependence.Initialize();
+
+            _camera.RecalculateTransformationMatrices();
+        }
+
+        #endregion
     }
 }

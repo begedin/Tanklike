@@ -55,7 +55,6 @@ D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\SharpDX.Direct3D11.xml
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\SharpDX.DXGI.xml
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\SharpDX.MediaFoundation.xml
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\SharpDX.XAudio2.xml
-D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\Tanklike.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\Tanklike.exe
 D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\Tanklike.pdb
 D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\SharpDX\en-us\SharpDX.Properties.Resources.resw
@@ -68,10 +67,6 @@ D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\resources.resfiles
 D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\pri.resfiles
 D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\LanguageQualifiers.txt
 D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\ProjectArchitectures.txt
-D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\priconfig.xml.intermediate
-D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\layout.resfiles.intermediate
-D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\resources.resfiles.intermediate
-D:\Documents\GitHub\Tanklike\Tanklike\obj\Debug\pri.resfiles.intermediate
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Fonts\Calibri.xnb
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Fonts\Arial.xnb
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Textures\logo.png

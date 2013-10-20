@@ -16,17 +16,17 @@
     <AppXManifest Include="D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-10-19T18:26:41.648</Modified>
+      <Modified>2013-10-20T05:20:59.511</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Tanklike.exe">
       <PackagePath>Tanklike.exe</PackagePath>
-      <Modified>2013-10-19T18:26:41.531</Modified>
+      <Modified>2013-10-20T05:20:55.513</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Tanklike.pdb">
       <PackagePath>Tanklike.pdb</PackagePath>
-      <Modified>2013-10-19T18:26:41.486</Modified>
+      <Modified>2013-10-20T05:20:55.486</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll">
       <PackagePath>MonoGame.Framework.dll</PackagePath>
@@ -110,7 +110,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-10-19T18:26:41.622</Modified>
+      <Modified>2013-10-20T05:20:59.483</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

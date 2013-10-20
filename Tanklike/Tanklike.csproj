@@ -131,6 +131,8 @@
   <ItemGroup>
     <Compile Include="AudioEngine.cs" />
     <Compile Include="AudioManager.cs" />
+    <Compile Include="Camera\Camera2D.cs" />
+    <Compile Include="Camera\ResolutionIndependentRenderer.cs" />
     <Compile Include="ETileType.cs" />
     <Compile Include="Fonts.cs" />
     <Compile Include="InputManager.cs" />
