@@ -109,5 +109,20 @@ namespace Tanklike
         }
 
         #endregion
+
+        internal static void EndSession()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void StartNewSession(ScreenManagement.ScreenManager ScreenManager, Screens.GamePlayScreen gamePlayScreen)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void LoadSession(ScreenManagement.ScreenManager ScreenManager, Screens.GamePlayScreen gamePlayScreen)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

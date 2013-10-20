@@ -79,3 +79,10 @@ D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Sounds\boom1.xn
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Sounds\boom2.xnb
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Music\song1.wma
 D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Music\song1.xnb
+D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Textures\button.png
+D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Textures\button_pushed.png
+D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Textures\button_messagebox.png
+D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Textures\button_messagebox_pushed.png
+D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Textures\messagebox_background.png
+D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Fonts\SegoeUI.xnb
+D:\Documents\GitHub\Tanklike\Tanklike\bin\Windows8\Debug\Content\Fonts\SegoeUIMono.xnb

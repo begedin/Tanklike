@@ -4,8 +4,15 @@ Assets\SplashScreen.png
 Assets\StoreLogo.png
 Content\Fonts\Arial.xnb
 Content\Fonts\Calibri.xnb
+Content\Fonts\SegoeUI.xnb
+Content\Fonts\SegoeUIMono.xnb
 Content\Music\song1.wma
 Content\Music\song1.xnb
 Content\Sounds\boom1.xnb
 Content\Sounds\boom2.xnb
+Content\Textures\button.png
+Content\Textures\button_messagebox.png
+Content\Textures\button_messagebox_pushed.png
+Content\Textures\button_pushed.png
 Content\Textures\logo.png
+Content\Textures\messagebox_background.png

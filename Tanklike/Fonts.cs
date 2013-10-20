@@ -19,11 +19,11 @@ namespace Tanklike
 
         #region Fonts
 
-        private static SpriteFont menuItemFont;
-        public static SpriteFont MenuItemFont
-        {
-            get { return menuItemFont; }
-        }
+        private static SpriteFont _menuItemFont;
+        public static SpriteFont MenuItemFont { get { return _menuItemFont; } }
+
+        private static SpriteFont _messageBoxFont;
+        public static SpriteFont MessageBoxFont { get { return _messageBoxFont; } }
 
         #endregion
 
@@ -40,7 +40,8 @@ namespace Tanklike
                 throw new ArgumentNullException("Content manager is missing");
             }
 
-            menuItemFont = contentManager.Load<SpriteFont>("Fonts/Arial");
+            _menuItemFont = contentManager.Load<SpriteFont>(@"Fonts\SegoeUIMono");
+            _messageBoxFont = contentManager.Load<SpriteFont>(@"Fonts\SegoeUIMono");
         }
 
 
@@ -49,9 +50,11 @@ namespace Tanklike
         /// </summary>
         public static void UnloadContent()
         {
-            menuItemFont = null;
+            _menuItemFont = null;
         }
 
         #endregion
+
+        
     }
 }

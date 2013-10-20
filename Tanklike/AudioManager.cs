@@ -135,6 +135,7 @@ namespace Tanklike
                     {
                         singleton.m_CurrentSong = singleton.m_Songs[cueName];
                         MediaPlayer.Play(singleton.m_CurrentSong);
+                        MediaPlayer.IsRepeating = true;
                     }
                 }
             }
@@ -172,6 +173,7 @@ namespace Tanklike
                         {
                             singleton.m_CurrentSong = singleton.m_Songs[cueName];
                             MediaPlayer.Play(singleton.m_CurrentSong);
+                            MediaPlayer.IsRepeating = true;
                         }
                     }
                 }

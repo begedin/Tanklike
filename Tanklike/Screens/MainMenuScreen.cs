@@ -12,27 +12,26 @@ namespace Tanklike.Screens
 {
     class MainMenuScreen : MenuScreen
     {
-        private Texture2D m_BackgroundTexture;
-        private Vector2 m_BackgroundPosition;
+        private Texture2D _textureBackground, _textureButton, _textureButtonPushed;
+        private Vector2 _positionBackground;
 
-        private MenuEntry m_menuNewGame, m_menuExitGame;
+        private MenuEntry _menuNewGame, _menuExitGame;
 
         #region Initialization
 
         public MainMenuScreen()
             : base()
         {
-            m_menuNewGame = new MenuEntry("New game");
-            m_menuNewGame.BindingRectangle = new Rectangle(20, 20, 50, 50);
-            m_menuNewGame.Font = Fonts.MenuItemFont;
-            m_menuNewGame.Selected += m_menuNewGame_Selected;
-            MenuEntries.Add(m_menuNewGame);
+            _menuNewGame = new MenuEntry("New game");
+            _menuNewGame.Font = Fonts.MenuItemFont;
+            _menuNewGame.Selected += m_menuNewGame_Selected;
+            MenuEntries.Add(_menuNewGame);
 
-            m_menuExitGame = new MenuEntry("Quit");
-            m_menuExitGame.BindingRectangle = new Rectangle(20, 100, 50, 50);
-            m_menuExitGame.Font = Fonts.MenuItemFont;
-            m_menuExitGame.Selected += OnCancel;
-            MenuEntries.Add(m_menuExitGame);
+            _menuExitGame = new MenuEntry("Quit");
+            _menuExitGame.BindingRectangle = new Rectangle(20, 100, 64, 64);
+            _menuExitGame.Font = Fonts.MenuItemFont;
+            _menuExitGame.Selected += OnCancel;
+            MenuEntries.Add(_menuExitGame);
 
             AudioManager.PushMusic("MainTheme");
         }
@@ -41,11 +40,22 @@ namespace Tanklike.Screens
         {
             // load the textures
             ContentManager content = ScreenManager.Game.Content;
-            m_BackgroundTexture = content.Load<Texture2D>(@"Textures\logo");
+            _textureBackground = content.Load<Texture2D>(@"Textures\logo");
+            _textureButton = content.Load<Texture2D>(@"Textures\button");
+            _textureButtonPushed = content.Load<Texture2D>(@"Textures\button_pushed");
+
+            //set menu entry textures
+            _menuNewGame.TextureNormal = _textureButton;
+            _menuNewGame.TexturePushed = _textureButtonPushed;
+            _menuExitGame.TextureNormal = _textureButton;
+            _menuExitGame.TexturePushed = _textureButtonPushed;
 
             // calculate the texture positions
             Viewport viewport = ScreenManager.GraphicsDevice.Viewport;
-            m_BackgroundPosition = new Vector2(300, 300);
+            _positionBackground = new Vector2((viewport.Width - _textureBackground.Width) / 2, (viewport.Height - _textureBackground.Height) / 2);
+
+            _menuNewGame.BindingRectangle = new Rectangle(viewport.Width / 10, viewport.Height / 2 - 128, 256, 256);
+            _menuExitGame.BindingRectangle = new Rectangle(viewport.Width - (viewport.Width / 10) - 256, viewport.Height / 2 - 128, 256, 256);
         }
 
         #endregion
@@ -77,6 +87,8 @@ namespace Tanklike.Screens
                 ExitScreen();
             }
 
+            ScreenManager.AddScreen(new GamePlayScreen());
+
             //ContentManager content = ScreenManager.Game.Content;
             //LoadingScreen.Load(ScreenManager, true, new GameplayScreen(
             //    content.Load<GameStartDescription>("MainGameDescription")));
@@ -88,21 +100,24 @@ namespace Tanklike.Screens
         /// </summary>
         protected override void OnCancel()
         {
-            //// add a confirmation message box
-            //string message = String.Empty;
-            //if (Session.IsActive)
-            //{
-            //    message =
-            //        "Are you sure you want to exit?  All unsaved progress will be lost.";
-            //}
-            //else
-            //{
-            //    message = "Are you sure you want to exit?";
-            //}
-            //MessageBoxScreen confirmExitMessageBox = new MessageBoxScreen(message);
-            //confirmExitMessageBox.Accepted += ConfirmExitMessageBoxAccepted;
-            //ScreenManager.AddScreen(confirmExitMessageBox);
+            // add a confirmation message box
+            string message = String.Empty;
+            if (Session.IsActive)
+            {
+                message =
+                    "Are you sure you want to exit?  All unsaved progress will be lost.";
+            }
+            else
+            {
+                message = "Are you sure you want to exit?";
+            }
+            MessageBoxScreen confirmExitMessageBox = new MessageBoxScreen(message);
+            confirmExitMessageBox.Accepted += ConfirmExitMessageBoxAccepted;
+            ScreenManager.AddScreen(confirmExitMessageBox);
+        }
 
+        private void ConfirmExitMessageBoxAccepted(object sender, EventArgs e)
+        {
             ScreenManager.Game.Exit();
         }
 
@@ -118,10 +133,10 @@ namespace Tanklike.Screens
         {
             SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise);
 
             // draw the background images
-            spriteBatch.Draw(m_BackgroundTexture, m_BackgroundPosition, Color.White);
+            spriteBatch.Draw(_textureBackground, _positionBackground, Color.White);
             // Draw each menu entry in turn.
             for (int i = 0; i < MenuEntries.Count; i++)
             {

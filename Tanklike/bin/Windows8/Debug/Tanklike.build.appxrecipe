@@ -49,6 +49,12 @@
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Fonts\Calibri.xnb">
       <PackagePath>Content\Fonts\Calibri.xnb</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Fonts\SegoeUI.xnb">
+      <PackagePath>Content\Fonts\SegoeUI.xnb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Fonts\SegoeUIMono.xnb">
+      <PackagePath>Content\Fonts\SegoeUIMono.xnb</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Sounds\boom1.xnb">
       <PackagePath>Content\Sounds\boom1.xnb</PackagePath>
     </AppxPackagedFile>
@@ -61,8 +67,23 @@
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Music\song1.wma">
       <PackagePath>Content\Music\song1.wma</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Textures\button.png">
+      <PackagePath>Content\Textures\button.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Textures\button_messagebox.png">
+      <PackagePath>Content\Textures\button_messagebox.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Textures\button_messagebox_pushed.png">
+      <PackagePath>Content\Textures\button_messagebox_pushed.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Textures\button_pushed.png">
+      <PackagePath>Content\Textures\button_pushed.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Textures\logo.png">
       <PackagePath>Content\Textures\logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Content\Textures\messagebox_background.png">
+      <PackagePath>Content\Textures\messagebox_background.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\GitHub\Tanklike\Tanklike\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
